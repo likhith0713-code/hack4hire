@@ -1,0 +1,6 @@
+{
+  "name": "WorkForce AI",
+  "description": "Autonomous AI Agents for Enterprise Operations - Multi-Agent Enterprise Automation Platform with Planner, HR, IT, Finance, Communication, and Approval Agents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

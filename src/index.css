@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    color: #f1f5f9;
+    background-color: #090d16;
+  }
+}
+
+/* Aurévo SaaS Gradient Accents & Glassmorphism */
+.bg-mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+              radial-gradient(at 50% 50%, rgba(236, 72, 153, 0.06) 0px, transparent 50%),
+              radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+}
+
+.dark .bg-mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.2) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.18) 0px, transparent 50%),
+              radial-gradient(at 50% 50%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+              radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Force high contrast inside all white and light card containers */
+.bg-white, [class*="bg-white"], .bg-slate-50, .bg-zinc-50, .bg-gray-50 {
+  color: #0f172a;
+}
+.bg-white h1, .bg-white h2, .bg-white h3, .bg-white h4, .bg-white h5, .bg-white h6,
+[class*="bg-white"] h1, [class*="bg-white"] h2, [class*="bg-white"] h3, [class*="bg-white"] h4, [class*="bg-white"] h5, [class*="bg-white"] h6 {
+  color: #0f172a !important;
+}
+.bg-white p, [class*="bg-white"] p,
+.bg-white li, [class*="bg-white"] li {
+  color: #334155 !important;
+}
+.bg-white span:not([class*="badge"]):not([class*="bg-"]),
+[class*="bg-white"] span:not([class*="badge"]):not([class*="bg-"]) {
+  color: #334155;
+}
+.bg-white .text-muted, [class*="bg-white"] .text-muted,
+.bg-white [class*="text-slate-300"], .bg-white [class*="text-slate-400"],
+[class*="bg-white"] [class*="text-slate-300"], [class*="bg-white"] [class*="text-slate-400"] {
+  color: #475569 !important;
+}
+
+/* Explicit dark mode preservation when dark theme is active */
+.dark .dark\:text-white, .dark [class*="dark:text-white"] {
+  color: #ffffff !important;
+}
+.dark .dark\:text-slate-100, .dark [class*="dark:text-slate-100"] {
+  color: #f1f5f9 !important;
+}
+.dark .dark\:text-slate-200, .dark [class*="dark:text-slate-200"] {
+  color: #e2e8f0 !important;
+}
+.dark .dark\:text-slate-300, .dark [class*="dark:text-slate-300"] {
+  color: #cbd5e1 !important;
+}
+.dark .dark\:text-slate-400, .dark [class*="dark:text-slate-400"] {
+  color: #94a3b8 !important;
+}
+.dark .dark\:bg-slate-900 h1, .dark .dark\:bg-slate-900 h2, .dark .dark\:bg-slate-900 h3,
+.dark .dark\:bg-slate-900 h4, .dark .dark\:bg-slate-900 h5, .dark .dark\:bg-slate-900 h6,
+.dark [class*="dark:bg-slate-900"] h1, .dark [class*="dark:bg-slate-900"] h2, .dark [class*="dark:bg-slate-900"] h3,
+.dark [class*="dark:bg-slate-900"] h4, .dark [class*="dark:bg-slate-900"] h5, .dark [class*="dark:bg-slate-900"] h6 {
+  color: #ffffff !important;
+}
+.dark .dark\:bg-slate-900 p, .dark [class*="dark:bg-slate-900"] p,
+.dark .dark\:bg-slate-900 li, .dark [class*="dark:bg-slate-900"] li {
+  color: #cbd5e1 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}

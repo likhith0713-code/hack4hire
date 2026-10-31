@@ -1,0 +1,16 @@
+{
+  "routes": [
+    { "path": "/", "title": "WorkForce AI" },
+    { "path": "/app", "title": "Dashboard" },
+    { "path": "/workflows", "title": "Workflows" },
+    { "path": "/approvals", "title": "Approval Center" },
+    { "path": "/agents", "title": "AI Agents" },
+    { "path": "/employees", "title": "Employees" },
+    { "path": "/finance", "title": "Finance" },
+    { "path": "/audit", "title": "Audit Log" },
+    { "path": "/analytics", "title": "Analytics" },
+    { "path": "/settings", "title": "Settings" },
+    { "path": "/sign-in", "title": "Sign in" },
+    { "path": "/create-account", "title": "Create account" }
+  ]
+}

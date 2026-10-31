@@ -1,0 +1,16 @@
+services:
+  workforce-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: workforce-ai-app
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env to your Supabase PostgreSQL connection URL}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      FRONTEND_URLS: ${FRONTEND_URLS:-http://localhost:3000}
+      WORKFORCE_COOKIE_SECURE: ${WORKFORCE_COOKIE_SECURE:-true}
+    restart: unless-stopped
